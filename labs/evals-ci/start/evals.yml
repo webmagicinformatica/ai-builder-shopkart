@@ -1,0 +1,40 @@
+# Run the Copilot's eval slice on every pull request that could change its answers.
+# Copy this file to .github/workflows/evals.yml (replacing the finished one) and fill in the TODOs.
+name: evals
+
+on:
+  # TODO A: run on pull requests, but only when something the answers depend on changes:
+  #   the client (shopkart/**), the eval lab (labs/evals/**, labs/evals-ci/**),
+  #   the policies and golden set (data/policies/**, data/golden/**), the dependencies
+  #   (pyproject.toml, uv.lock) and this file. Add workflow_dispatch for a manual button.
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      # TODO B: pass the ANTHROPIC_API_KEY Actions secret in as an environment variable,
+      #   and cap the spend: DAILY_BUDGET_USD "0.05". THRESHOLD "0.7" is the minimum pass rate.
+      THRESHOLD: "0.7"
+    steps:
+      # TODO C: a step with id "key" that writes ok=true or ok=false to $GITHUB_OUTPUT.
+      #   When the key is missing: a ::notice:: line, and a short "## Evals: skipped" note
+      #   in $GITHUB_STEP_SUMMARY. Every later step gets: if: steps.key.outputs.ok == 'true'
+
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+
+      - name: Install
+        run: uv sync --frozen
+
+      # TODO D: actions/cache@v4 for .shopkart/eval-cache, so unchanged cases cost $0.
+      #   key: evals-${{ hashFiles('labs/evals/done/**', 'data/policies/**', 'data/golden/**', 'shopkart/**') }}
+      #   restore-keys: evals-
+
+      - name: Run the eval slice and gate
+        run: uv run python labs/evals-ci/start/ci_gate.py --threshold "$THRESHOLD"

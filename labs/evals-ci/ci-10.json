@@ -1,0 +1,6 @@
+{
+  "name": "Pull request slice of the eval set",
+  "version": 1,
+  "how_picked": "10 of the 50 in labs/evals/eval-50.json, the same mix: 5 everyday, 3 hard, 2 must-hand-over, including two cases that failed in the full run (g-065, g-103)",
+  "ids": ["g-001", "g-012", "g-053", "g-065", "g-092", "g-003", "g-103", "g-124", "g-129", "g-138"]
+}

@@ -1,0 +1,71 @@
+# Run the Copilot's eval slice on every pull request that could change its answers.
+# Lives at .github/workflows/evals.yml. Needs the ANTHROPIC_API_KEY *Actions* secret
+# (Settings -> Secrets and variables -> Actions); without it the job skips and stays green.
+name: evals
+
+on:
+  pull_request:
+    paths:                          # anything the answers depend on
+      - "shopkart/**"               # the LLM client, model names, prices
+      - "labs/evals/**"             # prompt, checks, judge, eval set
+      - "labs/evals-ci/**"
+      - "data/policies/**"          # the documents the Copilot reads
+      - "data/golden/**"
+      - "pyproject.toml"
+      - "uv.lock"
+      - ".github/workflows/evals.yml"
+  workflow_dispatch: {}             # a "Run workflow" button, for trying it by hand
+
+permissions:
+  contents: read
+
+concurrency:                        # a new push cancels the run for the old one
+  group: evals-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      DAILY_BUDGET_USD: "0.05"      # this job can never spend more than 5 cents
+      THRESHOLD: "0.7"              # minimum pass rate on the 10-case slice
+    steps:
+      - name: Check for the API key
+        id: key
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Evals skipped: no ANTHROPIC_API_KEY Actions secret (pull requests from forks never get secrets)."
+            {
+              echo "## Evals: skipped"
+              echo
+              echo "No \`ANTHROPIC_API_KEY\` secret in this run, so no model was called."
+              echo "Add it under Settings → Secrets and variables → Actions → New repository secret."
+            } >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.key.outputs.ok == 'true'
+
+      - uses: astral-sh/setup-uv@v6
+        if: steps.key.outputs.ok == 'true'
+
+      - name: Install
+        if: steps.key.outputs.ok == 'true'
+        run: uv sync --frozen
+
+      - name: Restore cached answers      # unchanged cases cost $0
+        if: steps.key.outputs.ok == 'true'
+        uses: actions/cache@v4
+        with:
+          path: .shopkart/eval-cache
+          key: evals-${{ hashFiles('labs/evals/done/**', 'data/policies/**', 'data/golden/**', 'shopkart/**') }}
+          restore-keys: evals-
+
+      - name: Run the eval slice and gate
+        if: steps.key.outputs.ok == 'true'
+        run: uv run python labs/evals-ci/done/ci_gate.py --threshold "$THRESHOLD"

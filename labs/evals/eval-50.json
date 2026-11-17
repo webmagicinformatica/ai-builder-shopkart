@@ -1,0 +1,12 @@
+{
+  "name": "ShopKart Copilot eval set",
+  "version": 1,
+  "frozen": "2026-11-17",
+  "source": "data/golden/golden-150.jsonl",
+  "how_picked": "every third case of each category, in ID order: 30 everyday, 12 hard, 8 must-hand-over (the 90/35/25 mix of the golden set, scaled to 50)",
+  "ids": {
+    "everyday": ["g-001", "g-005", "g-009", "g-012", "g-015", "g-018", "g-022", "g-025", "g-029", "g-033", "g-036", "g-042", "g-045", "g-050", "g-053", "g-056", "g-059", "g-062", "g-065", "g-068", "g-071", "g-074", "g-077", "g-080", "g-083", "g-086", "g-089", "g-092", "g-095", "g-098"],
+    "hard": ["g-003", "g-027", "g-039", "g-048", "g-103", "g-106", "g-109", "g-112", "g-115", "g-118", "g-121", "g-124"],
+    "must_handover": ["g-126", "g-129", "g-132", "g-135", "g-138", "g-141", "g-144", "g-147"]
+  }
+}
