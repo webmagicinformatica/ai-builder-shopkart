@@ -240,7 +240,23 @@ The first try used `-P ubuntu-latest=node:22-bookworm-slim`. That image has no C
 
 ## On GitHub
 
-The same file is live at `.github/workflows/evals.yml`. The course repo has no `ANTHROPIC_API_KEY` Actions secret, so there it skips cleanly. In your own copy, add the secret (see the README) and open a pull request.
+The same file is live at `.github/workflows/evals.yml`. The course repo has no `ANTHROPIC_API_KEY` Actions secret, so there it skips cleanly. A real run, started with the "Run workflow" button (`workflow_dispatch`):
+
+```text
+$ gh workflow run evals.yml --ref main
+$ gh run view 44183229457
+✓ main evals · 44183229457
+Triggered via workflow_dispatch less than a minute ago
+
+JOBS
+✓ evals in 2s (ID 134392834088)
+
+ANNOTATIONS
+- Evals skipped: no ANTHROPIC_API_KEY Actions secret (pull requests from forks never get secrets).
+evals: .github#20
+```
+
+In your own copy, add the secret (see the README) and open a pull request.
 
 ## Spend
 
