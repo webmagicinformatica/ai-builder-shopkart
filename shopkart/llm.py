@@ -54,7 +54,7 @@ import openai
 from pydantic import BaseModel, ValidationError
 
 from shopkart import budget
-from shopkart.pricing import PRICES_PER_MILLION_USD, cost_usd, usd_to_inr
+from shopkart.pricing import cache_cost_usd, cost_usd, usd_to_inr
 
 log = logging.getLogger("shopkart.llm")
 
@@ -69,10 +69,16 @@ KEY_NAMES: dict[str, str] = {
     "openai": "OPENAI_API_KEY",
 }
 
-# Prompt caching: cached reads cost about a tenth of normal input, and on
-# Claude a cache write costs about a quarter more (see the caching lesson).
-CACHE_READ_FACTOR = 0.10
-CACHE_WRITE_FACTOR = 1.25
+# Thinking off: most models take {"type": "disabled"}; Claude Sonnet 5.5
+# rejects that with a 400 and uses "between_tools" as its off switch.
+THINKING_OFF: dict[str, dict[str, str]] = {
+    "claude-sonnet-5-5": {"type": "between_tools"},
+}
+# Reasoning off on OpenAI: "none" where the model allows it; gpt-6.2-sol's
+# lowest setting is "low" (its reasoning tokens bill as output).
+REASONING_OFF: dict[str, dict[str, str]] = {
+    "gpt-6.2-sol": {"effort": "low"},
+}
 
 CALL_LOG = budget.LEDGER_DIR / "calls.csv"
 
@@ -274,9 +280,8 @@ def call_cost_usd(model: str, input_tokens: int, output_tokens: int,
                   cache_read: int = 0, cache_write: int = 0) -> float:
     """Dollars for one call. `input_tokens` are the uncached ones."""
     cost = cost_usd(model, input_tokens, output_tokens)
-    if cache_read or cache_write:
-        price_in = PRICES_PER_MILLION_USD[model][0]
-        cost += (cache_read * CACHE_READ_FACTOR + cache_write * CACHE_WRITE_FACTOR) * price_in / 1e6
+    if cache_read or cache_write:  # prices per model in shopkart/pricing.py
+        cost += cache_cost_usd(model, cache_read, cache_write)
     return cost
 
 
@@ -602,7 +607,8 @@ class LLM:
     def _anthropic_args(self, msgs, system, max_tokens, schema, cache_system) -> dict[str, Any]:
         args: dict[str, Any] = dict(
             model=self.model, max_tokens=max_tokens, messages=_for_provider(msgs, "anthropic"),
-            thinking={"type": "disabled"},  # thinking tokens bill as output; turn on only when needed
+            # thinking tokens bill as output; turn on only when needed
+            thinking=THINKING_OFF.get(self.model, {"type": "disabled"}),
         )
         if system:
             if cache_system:  # the stable prefix gets cached; changing content goes last
@@ -619,7 +625,7 @@ class LLM:
     def _openai_args(self, msgs, system, max_tokens, schema) -> dict[str, Any]:
         args: dict[str, Any] = dict(
             model=self.model, input=_for_provider(msgs, "openai"), max_output_tokens=max_tokens,
-            reasoning={"effort": "none"},  # reasoning tokens bill as output
+            reasoning=REASONING_OFF.get(self.model, {"effort": "none"}),  # reasoning tokens bill as output
         )
         if system:
             args["instructions"] = system
