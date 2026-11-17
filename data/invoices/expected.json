@@ -1,0 +1,286 @@
+[
+  {
+    "file": "inv-01-sunrise-textiles.pdf",
+    "supplier_name": "Sunrise Textiles",
+    "supplier_gstin": "27ABCFS7710K1ZY",
+    "buyer_name": "ShopKart Retail Pvt Ltd",
+    "buyer_gstin": "27AAKCS4821M1ZW",
+    "invoice_number": "ST/2026-27/0412",
+    "invoice_date": "2026-11-03",
+    "place_of_supply": "Maharashtra (27)",
+    "line_items": [
+      {
+        "description": "Cotton Anarkali Kurta (assorted sizes)",
+        "hsn": "6204",
+        "qty": 40,
+        "unit_price_inr": 520.0,
+        "taxable_value_inr": 20800.0,
+        "gst_rate_pct": 5
+      },
+      {
+        "description": "Linen Kurta Set",
+        "hsn": "6211",
+        "qty": 25,
+        "unit_price_inr": 880.0,
+        "taxable_value_inr": 22000.0,
+        "gst_rate_pct": 5
+      }
+    ],
+    "taxable_value_inr": 42800.0,
+    "cgst_inr": 1070.0,
+    "sgst_inr": 1070.0,
+    "igst_inr": 0.0,
+    "total_inr": 44940.0,
+    "expected_validation_errors": []
+  },
+  {
+    "file": "inv-02-voltedge-electronics.pdf",
+    "supplier_name": "VoltEdge Electronics Pvt Ltd",
+    "supplier_gstin": "07AADCV3391P1ZP",
+    "buyer_name": "ShopKart Retail Pvt Ltd",
+    "buyer_gstin": "27AAKCS4821M1ZW",
+    "invoice_number": "VE-INV-88213",
+    "invoice_date": "2026-11-05",
+    "place_of_supply": "Maharashtra (27)",
+    "line_items": [
+      {
+        "description": "PowerMax 20W Fast Charger",
+        "hsn": "8504",
+        "qty": 200,
+        "unit_price_inr": 410.0,
+        "taxable_value_inr": 82000.0,
+        "gst_rate_pct": 18
+      },
+      {
+        "description": "65W GaN Charger",
+        "hsn": "8504",
+        "qty": 100,
+        "unit_price_inr": 395.0,
+        "taxable_value_inr": 39500.0,
+        "gst_rate_pct": 18
+      },
+      {
+        "description": "USB-C Cable 1m",
+        "hsn": "8544",
+        "qty": 300,
+        "unit_price_inr": 62.0,
+        "taxable_value_inr": 18600.0,
+        "gst_rate_pct": 18
+      }
+    ],
+    "taxable_value_inr": 140100.0,
+    "cgst_inr": 0.0,
+    "sgst_inr": 0.0,
+    "igst_inr": 25218.0,
+    "total_inr": 165318.0,
+    "expected_validation_errors": []
+  },
+  {
+    "file": "inv-03-kalpana-kitchenware.png",
+    "supplier_name": "Kalpana Kitchenware",
+    "supplier_gstin": "24AAGFK2210R1ZB",
+    "buyer_name": "ShopKart Retail Pvt Ltd",
+    "buyer_gstin": "27AAKCS4821M1ZW",
+    "invoice_number": "KK/1187",
+    "invoice_date": "2026-10-28",
+    "place_of_supply": "Maharashtra (27)",
+    "line_items": [
+      {
+        "description": "Pressure Cooker 5L",
+        "hsn": "7615",
+        "qty": 60,
+        "unit_price_inr": 1240.0,
+        "taxable_value_inr": 74400.0,
+        "gst_rate_pct": 12
+      },
+      {
+        "description": "Steel Blender Pro",
+        "hsn": "8509",
+        "qty": 30,
+        "unit_price_inr": 2050.0,
+        "taxable_value_inr": 61500.0,
+        "gst_rate_pct": 18
+      }
+    ],
+    "taxable_value_inr": 135900.0,
+    "cgst_inr": 0.0,
+    "sgst_inr": 0.0,
+    "igst_inr": 19998.0,
+    "total_inr": 155898.0,
+    "expected_validation_errors": []
+  },
+  {
+    "file": "inv-04-stride-footwear.pdf",
+    "supplier_name": "Stride Footwear India LLP",
+    "supplier_gstin": "33AAQFS5532D1Z8",
+    "buyer_name": "ShopKart Retail Pvt Ltd",
+    "buyer_gstin": "27AAKCS4821M1ZW",
+    "invoice_number": "SFI-2611-077",
+    "invoice_date": "2026-11-08",
+    "place_of_supply": "Maharashtra (27)",
+    "line_items": [
+      {
+        "description": "Stride RN220 Running Shoes",
+        "hsn": "6404",
+        "qty": 120,
+        "unit_price_inr": 1150.0,
+        "taxable_value_inr": 138000.0,
+        "gst_rate_pct": 12
+      },
+      {
+        "description": "Stride RN210 Running Shoes",
+        "hsn": "6404",
+        "qty": 80,
+        "unit_price_inr": 1390.0,
+        "taxable_value_inr": 111200.0,
+        "gst_rate_pct": 12
+      }
+    ],
+    "taxable_value_inr": 249200.0,
+    "cgst_inr": 0.0,
+    "sgst_inr": 0.0,
+    "igst_inr": 29904.0,
+    "total_inr": 283604.0,
+    "expected_validation_errors": [
+      "total_mismatch"
+    ],
+    "note": "Printed total 283604.00 but taxable + tax = 279104.00."
+  },
+  {
+    "file": "inv-05-greenleaf-packaging.pdf",
+    "supplier_name": "GreenLeaf Packaging",
+    "supplier_gstin": null,
+    "buyer_name": "ShopKart Retail Pvt Ltd",
+    "buyer_gstin": "27AAKCS4821M1ZW",
+    "invoice_number": "GLP-3390",
+    "invoice_date": "2026-11-10",
+    "place_of_supply": "Maharashtra (27)",
+    "line_items": [
+      {
+        "description": "Corrugated boxes 5-ply (medium)",
+        "hsn": "4819",
+        "qty": 2000,
+        "unit_price_inr": 18.5,
+        "taxable_value_inr": 37000.0,
+        "gst_rate_pct": 12
+      },
+      {
+        "description": "Bubble wrap roll 1m x 100m",
+        "hsn": "3923",
+        "qty": 40,
+        "unit_price_inr": 640.0,
+        "taxable_value_inr": 25600.0,
+        "gst_rate_pct": 18
+      }
+    ],
+    "taxable_value_inr": 62600.0,
+    "cgst_inr": 4524.0,
+    "sgst_inr": 4524.0,
+    "igst_inr": 0.0,
+    "total_inr": 71648.0,
+    "expected_validation_errors": [
+      "missing_supplier_gstin"
+    ],
+    "note": "No supplier GSTIN anywhere on the invoice: input tax credit cannot be claimed; send to review."
+  },
+  {
+    "file": "inv-06-nimbus-devices.png",
+    "supplier_name": "Nimbus Devices Pvt Ltd",
+    "supplier_gstin": "29AAECN6604H1ZD",
+    "buyer_name": "ShopKart Retail Pvt Ltd",
+    "buyer_gstin": "27AAKCS4821M1ZW",
+    "invoice_number": "NDP/26/11/0091",
+    "invoice_date": "2026-11-06",
+    "place_of_supply": "Maharashtra (27)",
+    "line_items": [
+      {
+        "description": "Nimbus Tab 10 Tablet",
+        "hsn": "8471",
+        "qty": 25,
+        "unit_price_inr": 6900.0,
+        "taxable_value_inr": 172500.0,
+        "gst_rate_pct": 18
+      }
+    ],
+    "taxable_value_inr": 172500.0,
+    "cgst_inr": 0.0,
+    "sgst_inr": 0.0,
+    "igst_inr": 31050.0,
+    "total_inr": 203550.0,
+    "expected_validation_errors": [
+      "low_quality_scan"
+    ],
+    "note": "Blurred, tilted phone photo. Values are readable with care; route to human review if confidence is low."
+  },
+  {
+    "file": "inv-07-pulse-wearables.png",
+    "supplier_name": "Pulse Wearables",
+    "supplier_gstin": "36AAJFP8812B1ZB",
+    "buyer_name": "ShopKart Retail Pvt Ltd",
+    "buyer_gstin": "27AAKCS4821M1ZW",
+    "invoice_number": "PW-2026-1432",
+    "invoice_date": "2026-11-02",
+    "place_of_supply": "Maharashtra (27)",
+    "line_items": [
+      {
+        "description": "Pulse Fit S2 Smartwatch",
+        "hsn": "8517",
+        "qty": 150,
+        "unit_price_inr": 760.0,
+        "taxable_value_inr": 114000.0,
+        "gst_rate_pct": 18
+      },
+      {
+        "description": "Pulse Fit S3 Smartwatch",
+        "hsn": "8517",
+        "qty": 60,
+        "unit_price_inr": 3050.0,
+        "taxable_value_inr": 183000.0,
+        "gst_rate_pct": 18
+      },
+      {
+        "description": "Spare strap (silicone)",
+        "hsn": "9113",
+        "qty": 200,
+        "unit_price_inr": 85.0,
+        "taxable_value_inr": 17000.0,
+        "gst_rate_pct": 18
+      }
+    ],
+    "taxable_value_inr": 314000.0,
+    "cgst_inr": 0.0,
+    "sgst_inr": 0.0,
+    "igst_inr": 56520.0,
+    "total_inr": 370520.0,
+    "expected_validation_errors": []
+  },
+  {
+    "file": "inv-08-desi-dryfruits.pdf",
+    "supplier_name": "Desi Dry Fruits Co.",
+    "supplier_gstin": "08AAKFD1145L1ZC",
+    "buyer_name": "ShopKart Retail Pvt Ltd",
+    "buyer_gstin": "27AAKCS4821M1ZW",
+    "invoice_number": "DDF/26/0558",
+    "invoice_date": "2026-11-09",
+    "place_of_supply": "Maharashtra (27)",
+    "line_items": [
+      {
+        "description": "Premium Dry Fruits Box 1 kg",
+        "hsn": "0813",
+        "qty": 100,
+        "unit_price_inr": 820.0,
+        "taxable_value_inr": 82000.0,
+        "gst_rate_pct": 5
+      }
+    ],
+    "taxable_value_inr": 82000.0,
+    "cgst_inr": 0.0,
+    "sgst_inr": 0.0,
+    "igst_inr": 9840.0,
+    "total_inr": 91840.0,
+    "expected_validation_errors": [
+      "tax_mismatch"
+    ],
+    "note": "Line rate printed as 5% but tax was computed at 12% (HSN 0813 dry fruits are 5%)."
+  }
+]
