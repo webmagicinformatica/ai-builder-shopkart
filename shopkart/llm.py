@@ -11,6 +11,9 @@ Every lab after this one imports it:
 
     triage = llm.complete(message, schema=Triage).parsed  # a Triage object
 
+    page = image_block(png_bytes)                 # images: one block, either provider
+    llm.complete([user_message("Read this invoice", [page])], schema=Invoice)
+
     for piece in llm.stream("Explain our return policy"):
         if isinstance(piece, str):
             print(piece, end="", flush=True)      # text as it arrives
@@ -31,6 +34,7 @@ CLI:  uv run python -m shopkart.llm "question" [--stream] [--provider openai]
 from __future__ import annotations
 
 import argparse
+import base64
 import csv
 import json
 import logging
@@ -304,6 +308,47 @@ def _as_messages(messages: Messages) -> list[dict[str, Any]]:
     return list(messages)
 
 
+# ---- images: one neutral block, translated per provider -----------------
+
+
+def image_block(data: bytes, media_type: str = "image/png", detail: str = "high") -> dict[str, Any]:
+    """An image as a content block, sent inline as base64 (works on both providers).
+
+    `detail` is OpenAI's resolution budget ("low", "high", "auto"); Claude ignores it.
+    """
+    return {"type": "image", "media_type": media_type, "detail": detail,
+            "data": base64.b64encode(data).decode("ascii")}
+
+
+def user_message(text: str, images: list[dict[str, Any]] | tuple = ()) -> dict[str, Any]:
+    """One user turn: the images first, then the text about them."""
+    return {"role": "user", "content": [*images, {"type": "text", "text": text}]}
+
+
+def _for_provider(msgs: list[dict[str, Any]], provider: str) -> list[dict[str, Any]]:
+    """Turn neutral image/text blocks into each API's own shape. Strings pass through unchanged."""
+    out = []
+    for m in msgs:
+        content = m.get("content")
+        if isinstance(content, list) and any(isinstance(b, dict) and b.get("type") == "image" for b in content):
+            m = {**m, "content": [_block_for(b, provider) for b in content]}
+        out.append(m)
+    return out
+
+
+def _block_for(block: Any, provider: str) -> Any:
+    kind = block.get("type") if isinstance(block, dict) else None
+    if kind == "image":
+        if provider == "anthropic":
+            return {"type": "image", "source": {"type": "base64", "media_type": block["media_type"],
+                                                "data": block["data"]}}
+        return {"type": "input_image", "detail": block.get("detail", "high"),
+                "image_url": f"data:{block['media_type']};base64,{block['data']}"}
+    if kind == "text" and provider == "openai":
+        return {"type": "input_text", "text": block["text"]}
+    return block
+
+
 class LLM:
     """One client for Claude and OpenAI, with the same calls and the same Result."""
 
@@ -556,7 +601,7 @@ class LLM:
 
     def _anthropic_args(self, msgs, system, max_tokens, schema, cache_system) -> dict[str, Any]:
         args: dict[str, Any] = dict(
-            model=self.model, max_tokens=max_tokens, messages=msgs,
+            model=self.model, max_tokens=max_tokens, messages=_for_provider(msgs, "anthropic"),
             thinking={"type": "disabled"},  # thinking tokens bill as output; turn on only when needed
         )
         if system:
@@ -573,7 +618,7 @@ class LLM:
 
     def _openai_args(self, msgs, system, max_tokens, schema) -> dict[str, Any]:
         args: dict[str, Any] = dict(
-            model=self.model, input=msgs, max_output_tokens=max_tokens,
+            model=self.model, input=_for_provider(msgs, "openai"), max_output_tokens=max_tokens,
             reasoning={"effort": "none"},  # reasoning tokens bill as output
         )
         if system:
