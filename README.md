@@ -77,6 +77,32 @@ They use fake numbers: no key, no network, no cost.
 - [ ] `git status` shows no `.env` and no `.shopkart/`
 - [ ] Your work committed and pushed: `git add -A && git commit -m "First cost-tracked call" && git push`
 
+## Get new labs
+
+New labs are added to this course repo over time (`labs/<lab>/`, plus shared data in `data/`).
+Your copy doesn't update by itself. Link it to the course repo once, then pull.
+
+**One time only** (in your codespace terminal):
+
+```bash
+git remote add upstream https://github.com/webmagicinformatica/ai-builder-shopkart.git
+git config pull.rebase false
+git pull upstream main --allow-unrelated-histories -X theirs --no-edit
+uv sync
+git push
+```
+
+Why the extra flags? "Use this template" gives your repo a fresh history, so Git sees the course repo as unrelated and refuses to merge without `--allow-unrelated-histories`. On this first pull, `-X theirs` takes the course's version of any file both sides have changed (for example `README.md`); files you created yourself are kept.
+
+**Every time after that:**
+
+```bash
+git pull upstream main
+uv sync
+```
+
+Commit your own work first (`git add -A && git commit -m "..."`). Work inside `labs/<lab>/start/` and you won't get conflicts. Each lab's `done/` folder has the finished version if you get stuck.
+
 ---
 
 MIT licensed · [dabeer.ai on YouTube](https://www.youtube.com/@dabeer.ai)
