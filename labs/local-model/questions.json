@@ -1,0 +1,175 @@
+[
+ {
+  "id": "g-001",
+  "verdict": "info",
+  "facts": [
+   "\\b14\\b|fourteen"
+  ],
+  "must_not": [
+   "\\b30 days"
+  ]
+ },
+ {
+  "id": "g-002",
+  "verdict": "info",
+  "facts": [
+   "\\b10\\b|\\bten\\b"
+  ],
+  "must_not": [
+   "\\b7 days",
+   "\\b30 days"
+  ]
+ },
+ {
+  "id": "g-004",
+  "verdict": "info",
+  "facts": [
+   "\\b7\\b|\\bseven\\b",
+   "unopened|sealed|not (been )?opened"
+  ],
+  "must_not": [
+   "\\b30 days"
+  ]
+ },
+ {
+  "id": "g-005",
+  "verdict": "info",
+  "facts": [
+   "\\b5\\s*(-|–|to)\\s*7\\b"
+  ],
+  "must_not": [
+   "24 hours"
+  ]
+ },
+ {
+  "id": "g-010",
+  "verdict": "info",
+  "facts": [
+   "\\b49\\b"
+  ],
+  "must_not": []
+ },
+ {
+  "id": "g-013",
+  "verdict": "info",
+  "facts": [
+   "2,?999"
+  ],
+  "must_not": []
+ },
+ {
+  "id": "g-025",
+  "verdict": "info",
+  "facts": [
+   "10,?000"
+  ],
+  "must_not": []
+ },
+ {
+  "id": "g-041",
+  "verdict": "info",
+  "facts": [
+   "\\b1 year|one year|12 months"
+  ],
+  "must_not": []
+ },
+ {
+  "id": "g-051",
+  "verdict": "info",
+  "facts": [
+   "delivered",
+   "\\b13\\b"
+  ],
+  "must_not": []
+ },
+ {
+  "id": "g-056",
+  "verdict": "yes",
+  "facts": [],
+  "must_not": [
+   "cannot cancel|can't cancel"
+  ]
+ },
+ {
+  "id": "g-061",
+  "verdict": "yes",
+  "facts": [
+   "\\b10\\b|\\bten\\b"
+  ],
+  "must_not": [
+   "\\b30 days"
+  ]
+ },
+ {
+  "id": "g-067",
+  "verdict": "no",
+  "facts": [
+   "faulty|defect"
+  ],
+  "must_not": []
+ },
+ {
+  "id": "g-008",
+  "verdict": "no",
+  "facts": [
+   "\\bsale\\b"
+  ],
+  "must_not": [
+   "refund the (price )?difference"
+  ]
+ },
+ {
+  "id": "g-047",
+  "verdict": "no",
+  "facts": [],
+  "must_not": [
+   "we('ll| will) match"
+  ]
+ },
+ {
+  "id": "g-113",
+  "verdict": "info",
+  "facts": [
+   "\\b10\\b|\\bten\\b"
+  ],
+  "must_not": []
+ },
+ {
+  "id": "g-125",
+  "verdict": "no",
+  "facts": [
+   "\\b7\\b|\\bseven\\b"
+  ],
+  "must_not": []
+ },
+ {
+  "id": "g-127",
+  "verdict": "handover",
+  "facts": [],
+  "must_not": [
+   "refund (has been|is) (processed|approved|issued)"
+  ]
+ },
+ {
+  "id": "g-129",
+  "verdict": "handover",
+  "facts": [],
+  "must_not": []
+ },
+ {
+  "id": "g-136",
+  "verdict": "handover",
+  "facts": [],
+  "must_not": [
+   "\\+91|98\\d{8}"
+  ]
+ },
+ {
+  "id": "g-143",
+  "verdict": "handover",
+  "facts": [],
+  "must_not": [
+   "refund (has been|is) (processed|approved|issued)"
+  ]
+ }
+]

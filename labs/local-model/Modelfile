@@ -1,0 +1,13 @@
+# The Copilot's local model: a preset, not a new model. No training happens here.
+#   ollama create shopkart-local -f labs/local-model/Modelfile
+FROM qwen2.5:1.5b
+
+# Ollama's default context is 4096 tokens, and a longer prompt is trimmed quietly.
+# Our prompts are about 1,000 tokens; 8192 leaves room, and still fits in 8 GB.
+PARAMETER num_ctx 8192
+
+# A Codespace has 2 cores. Use both, and no more threads than that.
+PARAMETER num_thread 2
+
+# Same answer every run, so the comparison is fair.
+PARAMETER temperature 0
