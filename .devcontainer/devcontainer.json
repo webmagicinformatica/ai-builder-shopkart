@@ -1,0 +1,44 @@
+{
+  "name": "AI Builder · ShopKart Support Copilot",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/va-h/devcontainers-features/uv:1": {}
+  },
+  "hostRequirements": {
+    "cpus": 2
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md"
+      ]
+    },
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "bierner.markdown-preview-github-styles"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/bin/python"
+      }
+    }
+  },
+  "postCreateCommand": "uv sync",
+  "remoteUser": "vscode",
+  "secrets": {
+    "ANTHROPIC_API_KEY": {
+      "description": "Your Anthropic API key (for hello_anthropic.py)",
+      "documentationUrl": "https://platform.claude.com/settings/keys"
+    },
+    "OPENAI_API_KEY": {
+      "description": "Your OpenAI API key (for hello_openai.py)",
+      "documentationUrl": "https://platform.openai.com/api-keys"
+    }
+  }
+}
