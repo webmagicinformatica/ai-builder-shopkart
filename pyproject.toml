@@ -16,6 +16,10 @@ dependencies = [
 ]
 
 [dependency-groups]
+agents = [
+    "claude-agent-sdk==0.2.183",
+    "openai-agents==0.24.0",
+]
 dev = [
     "pytest==9.2.0",
 ]

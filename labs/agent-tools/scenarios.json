@@ -1,0 +1,14 @@
+[
+  {"name": "cracked-watch", "customer": "C1001",
+   "message": "My smartwatch arrived with a cracked screen. Order SK48213. I want my money back, not a replacement.",
+   "expect": "lookup_order, check_policy, draft_refund for ₹1,299 (damaged); a person approves it at the desk"},
+  {"name": "damaged-tablet", "customer": "C1008",
+   "message": "My Nimbus Tab from order SK48488 came with a dented corner and a cracked screen. I want a refund, not a replacement.",
+   "expect": "draft_refund for ₹9,499: above ₹5,000, so it always goes to a person"},
+  {"name": "already-refunded", "customer": "C1007",
+   "message": "My phone from order SK48450 arrived with a cracked screen. I want a refund of 18999.",
+   "expect": "already refunded in full last week: the code blocks the draft, ₹0 moves, hand over"},
+  {"name": "late-shoes", "customer": "C1003",
+   "message": "I want to return my running shoes from order SK47731, they hurt my feet. Please refund me.",
+   "expect": "delivered 12 days ago, outside the 10-day footwear window: no refund promised, hand over"}
+]
