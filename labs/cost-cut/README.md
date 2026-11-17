@@ -12,7 +12,8 @@ labs/cost-cut/
   tests/              the checkpoints, with fake servers (no key, no cost)
 ```
 
-The workload is `data/workload.jsonl`: 200 real-looking questions with easy/hard labels and many repeats. The lab runs the **first 20** (`--limit 20`), so one full run costs about $0.16 on Claude. That fits the $0.50 daily budget, but watch it: `--limit 200` costs ten times as much.
+The workload is `data/workload.jsonl`: 200 real-looking questions with easy/hard labels and many repeats.
+**Run every step with `--limit 10`** (the first 10 questions): the whole lab then costs **about $0.08 on Claude** (baseline about $0.054, the other steps a few cents together) and about $0.02 on OpenAI. The default is 20 questions (about $0.16, as in [RUN.md](RUN.md)); `--limit 200` costs ten times that. Your daily budget is $0.50, and running a step again replays it for $0 (see below).
 
 | | Anthropic (default) | OpenAI (`--provider openai`) |
 | --- | --- | --- |
@@ -27,20 +28,20 @@ Prices per million tokens, checked November 2026 (`shopkart/pricing.py`). Check 
 
 1. **Baseline.** Every question goes to the large model with the policy sheet as the system prompt. Note the cost, the input tokens (about 2,150 per call, the same policy text every time) and the time.
    ```bash
-   uv run python labs/cost-cut/start/cost_cut.py baseline
+   uv run python labs/cost-cut/start/cost_cut.py baseline --limit 10
    ```
 2. **Prompt caching (TODO 1).** In `answer()`, pass `cache_system=cache`. The policy sheet is the stable prefix; the question comes last. Re-run and watch the `write` and `read` columns: the first call writes about 2,150 tokens to the cache (at 1.25x), and every later call reads them (at 0.05x).
    ```bash
-   uv run python labs/cost-cut/start/cost_cut.py cache
+   uv run python labs/cost-cut/start/cost_cut.py cache --limit 10
    ```
    On OpenAI there's nothing to switch on: it caches prompts of 1,024+ tokens by itself, and `read` shows its `cached_tokens`. It is best-effort, so check the numbers.
 3. **Routing (TODO 2).** In `route()`, ask the small model for one word, `easy`, `hard` or `unsure`, with the `Route` schema. Easy questions go to the small model; hard and unsure ones go to the large model. When the router isn't sure, go big.
    ```bash
-   uv run python labs/cost-cut/start/cost_cut.py route
+   uv run python labs/cost-cut/start/cost_cut.py route --limit 10
    ```
 4. **A local response cache (TODO 3).** In `ResponseCache`, make the key the cleaned-up question (lower case, no punctuation, single spaces), and never cache a question with an order number: it's personal. Exact repeats now cost $0 and skip the model. In production this would be Redis; clear it whenever a policy changes.
    ```bash
-   uv run python labs/cost-cut/start/cost_cut.py final
+   uv run python labs/cost-cut/start/cost_cut.py final --limit 10
    ```
 5. **The table (TODO 4).** Write `saving()`, then compare all four runs, with a quick quality check: did each answer keep its key facts (`answer_key.json`), compared with the baseline? Then read the answers side by side yourself.
    ```bash
