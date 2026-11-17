@@ -172,6 +172,13 @@ class Verdict:
     request_id: str | None = None
     retry_after: float | None = None
 
+    def label(self) -> str:
+        """e.g. "429 rate_limit" or "400 spend_limit (insufficient_quota)"."""
+        text = f"{self.status} {self.kind}" if self.status else self.kind
+        if self.code and self.code != self.kind and self.code != f"{self.kind}_error":
+            text += f" ({self.code})"
+        return text
+
 
 def _error_details(exc: Exception) -> tuple[str | None, str | None, str]:
     """(type, code, message) from an SDK error body. Read the body, not just the status."""
@@ -247,8 +254,7 @@ def classify(exc: Exception) -> Verdict:
 
 def _to_error(v: Verdict, attempts: int) -> LLMError:
     cls = SpendLimitReached if v.kind == "spend_limit" else LLMError
-    status = f"{v.status} " if v.status else ""
-    msg = f"{status}{v.kind}: {v.message}"
+    msg = f"{v.label()}: {v.message}"
     if v.request_id:
         msg += f" (request {v.request_id})"
     return cls(msg, kind=v.kind, status=v.status, code=v.code,
@@ -419,6 +425,7 @@ class LLM:
                     else:
                         piece.attempts = attempt
                         piece.latency_s = time.monotonic() - start
+                        self._log(piece)
                         if schema is not None:
                             try:
                                 piece.parsed = schema.model_validate_json(piece.text)
@@ -450,11 +457,11 @@ class LLM:
     def _next_delay(self, v: Verdict, attempt: int, waited: float, start: float) -> float | None:
         """How long to wait before the next attempt, or None to stop now."""
         if not v.retry:
-            log.error("stop: %s %s %s, not retrying (attempt %d)%s", v.status or "", v.kind,
-                      v.code or "", attempt, f" request {v.request_id}" if v.request_id else "")
+            log.error("stop: %s, not retrying (attempt %d)%s", v.label(), attempt,
+                      f", request {v.request_id}" if v.request_id else "")
             return None
         if attempt >= self.max_attempts:
-            log.error("give up: %s %s after %d attempts", v.status or "", v.kind, attempt)
+            log.error("give up: %s after %d attempts", v.label(), attempt)
             return None
         if v.retry_after is not None:
             delay, why = min(v.retry_after, self.max_delay * 4), "retry-after"
@@ -462,11 +469,9 @@ class LLM:
             backoff = min(self.base_delay * 2 ** (attempt - 1), self.max_delay)
             delay, why = backoff * random.uniform(0.5, 1.5), "backoff+jitter"  # jitter: no thundering herd
         if time.monotonic() - start + delay > self.max_total_s:
-            log.error("give up: %s %s, next wait %.1fs would pass the %.0fs cap", v.status or "", v.kind,
-                      delay, self.max_total_s)
+            log.error("give up: %s, next wait %.1fs would pass the %.0fs cap", v.label(), delay, self.max_total_s)
             return None
-        log.warning("retry %d/%d: %s %s, waiting %.1fs (%s)", attempt, self.max_attempts - 1,
-                    v.status or "", v.kind, delay, why)
+        log.warning("retry %d/%d: %s, waiting %.1fs (%s)", attempt, self.max_attempts - 1, v.label(), delay, why)
         return delay
 
     def _with_retries(self, call: Callable[[], Result]) -> Result:
@@ -478,6 +483,7 @@ class LLM:
                 result = call()
                 result.attempts = attempt
                 result.latency_s = time.monotonic() - start
+                self._log(result)
                 return result
             except (anthropic.APIError, openai.APIError) as exc:
                 v = classify(exc)
@@ -499,13 +505,17 @@ class LLM:
             cache_read_tokens=usage["cache_read"], cache_write_tokens=usage["cache_write"],
             request_id=request_id,
         )
-        total = budget.record(cost)
-        log.info("cost: %s · today $%.6f", result.summary(), total)
+        # Paid for, whatever happens next: record it now (attempts/latency get
+        # filled in by the retry loop, which then calls _log).
+        budget.record(cost)
+        return result
+
+    def _log(self, result: Result) -> None:
+        log.info("cost: %s · today $%.6f", result.summary(), budget.spent_today())
         try:
             log_call(result)
         except OSError:
             pass
-        return result
 
     def _complete_once(self, msgs, system, max_tokens, schema, cache_system) -> Result:
         start = time.monotonic()
@@ -621,7 +631,9 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--provider", choices=["anthropic", "openai"], default=None,
                         help="default: $LLM_PROVIDER, else anthropic")
     parser.add_argument("--model", default=None)
-    parser.add_argument("--system", default="You are ShopKart's support assistant. Answer in two short sentences.")
+    parser.add_argument("--system", default=(
+        "You are ShopKart's support assistant. Return window: 14 days (footwear 10 days, "
+        "damaged electronics 7 days). Answer in two short sentences."))
     parser.add_argument("--max-tokens", type=int, default=300)
     parser.add_argument("--timeout", type=float, default=30.0)
     parser.add_argument("-v", "--verbose", action="store_true", help="also log the cost line of every call")

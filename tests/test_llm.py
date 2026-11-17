@@ -138,6 +138,8 @@ def test_retries_429_then_succeeds(provider):
     server = FakeServer(provider, [429, 429, answer(provider, "ok")])
     result = server.llm().complete("hi")
     assert result.text == "ok" and result.attempts == 3 and server.calls == 3
+    last_row = (budget.LEDGER_DIR / "calls.csv").read_text().strip().splitlines()[-1].split(",")
+    assert last_row[-2:] == ["3", "ok"]  # the cost log shows the retries
 
 
 def test_retries_529_overloaded():
