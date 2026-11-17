@@ -40,9 +40,9 @@ uv run hello_anthropic.py      # or: uv run hello_openai.py
 Model:   claude-haiku-5-5
 Reply:   Namaste, and welcome to ShopKart! How can I help you today?
 Tokens:  22 in, 17 out
-Cost:    $0.000107  (₹0.01)
+Cost:    $0.000011  (₹0.0009)
 
-Today:   $0.000107 of $0.50 daily budget
+Today:   $0.000011 of $0.50 daily budget
 ```
 
 Your reply and token counts will differ. Costs use the course's example prices in `shopkart/pricing.py`; check the current pricing page for real ones.
@@ -57,7 +57,7 @@ DAILY_BUDGET_USD=0.000001 uv run hello_anthropic.py
 ```
 
 ```text
-Budget reached: spent $0.000107 of $0.000001 today. Call blocked.
+Budget reached: spent $0.000011 of $0.000001 today. Call blocked.
 ```
 
 No call is made, and the script exits with an error. Today's spend is kept in `.shopkart/` (gitignored), and it resets every day.

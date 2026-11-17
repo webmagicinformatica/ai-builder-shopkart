@@ -46,8 +46,8 @@ def test_prints_cost_and_records_it(script, attr, fake, model, monkeypatch, caps
     out = capsys.readouterr().out
     assert f"Model:   {model}" in out
     assert "Tokens:  20 in, 15 out" in out
-    assert "Cost:    $0.000095  (₹0.01)" in out  # 20 x $1/M + 15 x $5/M
-    assert budget.spent_today() == pytest.approx(0.000095)
+    assert "Cost:    $0.000010  (₹0.0008)" in out  # 20 x $0.10/M + 15 x $0.50/M
+    assert budget.spent_today() == pytest.approx(0.0000095)
 
 
 def test_missing_key_exits_with_hint(monkeypatch, capsys):

@@ -51,7 +51,7 @@ def print_call(model: str, reply: str, input_tokens: int, output_tokens: int, co
 Model:   {model}
 Reply:   {reply}
 Tokens:  {input_tokens} in, {output_tokens} out
-Cost:    ${cost:.6f}  (₹{usd_to_inr(cost):.2f})
+Cost:    ${cost:.6f}  (₹{usd_to_inr(cost):.4f})
 """
     )
 
