@@ -1,0 +1,1754 @@
+[
+  {
+    "order_id": "SK04512",
+    "customer_id": "C1013",
+    "customer_name": "Aditya Banerjee",
+    "city": "Kolkata",
+    "pin_code": "700091",
+    "placed_on": "2026-10-30",
+    "status": "returned",
+    "promised_by": "2026-11-02",
+    "delivered_on": "2026-11-03",
+    "items": [
+      {
+        "sku": "HM-BLN3",
+        "name": "Steel Blender Pro",
+        "category": "home_kitchen",
+        "qty": 1,
+        "unit_price_inr": 3499,
+        "sale": true,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 3499,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 3499,
+    "payment_method": "card",
+    "upi_reference": null,
+    "emi_months": null,
+    "tracking_number": "SKX826600539",
+    "refunds": [
+      {
+        "amount_inr": 3499,
+        "status": "initiated",
+        "date": "2026-11-16",
+        "reference": "ARN74418820551",
+        "reason": "returned"
+      }
+    ],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 3499,
+        "date": "2026-10-30"
+      }
+    ],
+    "return": {
+      "requested_on": "2026-11-09",
+      "picked_up_on": "2026-11-12",
+      "qc": "passed"
+    },
+    "note": "Refund approved on Monday 16 Nov (streaming lesson)."
+  },
+  {
+    "order_id": "SK46655",
+    "customer_id": "C1006",
+    "customer_name": "Vikram Singh",
+    "city": "Bengaluru",
+    "pin_code": "560034",
+    "placed_on": "2026-11-01",
+    "status": "delivered",
+    "promised_by": "2026-11-04",
+    "delivered_on": "2026-11-08",
+    "items": [
+      {
+        "sku": "EL-AB14",
+        "name": "AeroBook 14 Laptop (16 GB, 512 GB)",
+        "category": "electronics",
+        "qty": 1,
+        "unit_price_inr": 54990,
+        "sale": true,
+        "clearance": false
+      },
+      {
+        "sku": "AC-LB15",
+        "name": "Urban Laptop Bag 15.6\"",
+        "category": "accessories",
+        "qty": 1,
+        "unit_price_inr": 1499,
+        "sale": true,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 56489,
+    "discount_inr": 750,
+    "coupon": "DIWALI10",
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 55739,
+    "payment_method": "emi",
+    "upi_reference": null,
+    "emi_months": 12,
+    "tracking_number": "SKX128492780",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 55739,
+        "date": "2026-11-01"
+      }
+    ],
+    "return": null,
+    "note": "Bought in Big Diwali Sale on EMI; laptop price dropped a week later; customer wants to return only the bag."
+  },
+  {
+    "order_id": "SK47215",
+    "customer_id": "C1042",
+    "customer_name": "Meera Nair",
+    "city": "Kochi",
+    "pin_code": "682020",
+    "placed_on": "2026-10-28",
+    "status": "return_in_progress",
+    "promised_by": "2026-11-03",
+    "delivered_on": "2026-11-04",
+    "items": [
+      {
+        "sku": "FW-SND04",
+        "name": "Kolhapuri Leather Sandals",
+        "category": "footwear",
+        "qty": 1,
+        "unit_price_inr": 1199,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 1199,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 49,
+    "cod_fee_inr": 0,
+    "total_inr": 1248,
+    "payment_method": "upi",
+    "upi_reference": "336625619290",
+    "emi_months": null,
+    "tracking_number": "SKX349817734",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 1248,
+        "date": "2026-10-28"
+      }
+    ],
+    "return": {
+      "requested_on": "2026-11-10",
+      "picked_up_on": "2026-11-14",
+      "qc": "pending"
+    },
+    "note": "Meera's return: picked up, quality check pending (access-control lab)."
+  },
+  {
+    "order_id": "SK47731",
+    "customer_id": "C1003",
+    "customer_name": "Sneha Kulkarni",
+    "city": "Pune",
+    "pin_code": "411038",
+    "placed_on": "2026-11-01",
+    "status": "delivered",
+    "promised_by": "2026-11-04",
+    "delivered_on": "2026-11-05",
+    "items": [
+      {
+        "sku": "FW-RN210",
+        "name": "Stride RN210 Running Shoes",
+        "category": "footwear",
+        "qty": 1,
+        "unit_price_inr": 2799,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 2799,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 2799,
+    "payment_method": "upi",
+    "upi_reference": "196831611956",
+    "emi_months": null,
+    "tracking_number": "SKX734036506",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 2799,
+        "date": "2026-11-01"
+      }
+    ],
+    "return": null,
+    "note": "Delivered 12 days ago: outside the 10-day footwear window."
+  },
+  {
+    "order_id": "SK47990",
+    "customer_id": "C1012",
+    "customer_name": "Rahul Verma",
+    "city": "Indore",
+    "pin_code": "452010",
+    "placed_on": "2026-11-07",
+    "status": "cancelled",
+    "promised_by": "2026-11-13",
+    "delivered_on": null,
+    "items": [
+      {
+        "sku": "EL-SBX2",
+        "name": "SonicBuds X2 Wireless Earbuds",
+        "category": "electronics",
+        "qty": 1,
+        "unit_price_inr": 1999,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 1999,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 49,
+    "cod_fee_inr": 0,
+    "total_inr": 2048,
+    "payment_method": "upi",
+    "upi_reference": "108028583755",
+    "emi_months": null,
+    "tracking_number": null,
+    "refunds": [
+      {
+        "amount_inr": 1999,
+        "status": "initiated",
+        "date": "2026-11-07",
+        "reference": null,
+        "reason": "cancelled"
+      }
+    ],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 2048,
+        "date": "2026-11-07"
+      }
+    ],
+    "return": null,
+    "note": "Cancelled 10 days ago; refund not received yet (reranking lesson)."
+  },
+  {
+    "order_id": "SK48102",
+    "customer_id": "C1042",
+    "customer_name": "Meera Nair",
+    "city": "Kochi",
+    "pin_code": "682020",
+    "placed_on": "2026-11-11",
+    "status": "delivered",
+    "promised_by": "2026-11-17",
+    "delivered_on": "2026-11-13",
+    "items": [
+      {
+        "sku": "FW-RN220",
+        "name": "Stride RN220 Running Shoes",
+        "category": "footwear",
+        "qty": 1,
+        "unit_price_inr": 2299,
+        "sale": false,
+        "clearance": true
+      }
+    ],
+    "subtotal_inr": 2299,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 49,
+    "cod_fee_inr": 0,
+    "total_inr": 2348,
+    "payment_method": "upi",
+    "upi_reference": "136171878809",
+    "emi_months": null,
+    "tracking_number": "SKX131994523",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 2348,
+        "date": "2026-11-11"
+      }
+    ],
+    "return": null,
+    "note": "Clearance = final sale; exchange only for a defect."
+  },
+  {
+    "order_id": "SK48120",
+    "customer_id": "C1010",
+    "customer_name": "Sunita Devi",
+    "city": "Jaipur",
+    "pin_code": "302017",
+    "placed_on": "2026-11-03",
+    "status": "replacement_in_progress",
+    "promised_by": "2026-11-09",
+    "delivered_on": "2026-11-07",
+    "items": [
+      {
+        "sku": "HM-MXG750",
+        "name": "Mixer Grinder 750W",
+        "category": "home_kitchen",
+        "qty": 1,
+        "unit_price_inr": 3299,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 3299,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 30,
+    "total_inr": 3329,
+    "payment_method": "cod",
+    "upi_reference": null,
+    "emi_months": null,
+    "tracking_number": "SKX685126461",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 0,
+        "date": "2026-11-03"
+      }
+    ],
+    "return": null,
+    "note": "Defective mixer; replacement ships Thursday 19 Nov (memory lesson, Hindi)."
+  },
+  {
+    "order_id": "SK48140",
+    "customer_id": "C1011",
+    "customer_name": "Neha Gupta",
+    "city": "Delhi",
+    "pin_code": "110017",
+    "placed_on": "2026-11-05",
+    "status": "delivered",
+    "promised_by": "2026-11-08",
+    "delivered_on": "2026-11-08",
+    "items": [
+      {
+        "sku": "BK-ATH1",
+        "name": "Atomic Habits (Paperback)",
+        "category": "books",
+        "qty": 1,
+        "unit_price_inr": 399,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 399,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 49,
+    "cod_fee_inr": 0,
+    "total_inr": 448,
+    "payment_method": "upi",
+    "upi_reference": "407473554860",
+    "emi_months": null,
+    "tracking_number": "SKX969119330",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 448,
+        "date": "2026-11-05"
+      }
+    ],
+    "return": null,
+    "note": null
+  },
+  {
+    "order_id": "SK48190",
+    "customer_id": "C1005",
+    "customer_name": "Anjali Menon",
+    "city": "Kochi",
+    "pin_code": "682020",
+    "placed_on": "2026-11-16",
+    "status": "placed",
+    "promised_by": "2026-11-22",
+    "delivered_on": null,
+    "items": [
+      {
+        "sku": "FW-SLD01",
+        "name": "Comfy Cloud Slides",
+        "category": "footwear",
+        "qty": 1,
+        "unit_price_inr": 799,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 799,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 49,
+    "cod_fee_inr": 0,
+    "total_inr": 848,
+    "payment_method": "upi",
+    "upi_reference": "763595448017",
+    "emi_months": null,
+    "tracking_number": null,
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 848,
+        "date": "2026-11-16"
+      }
+    ],
+    "return": null,
+    "note": "Rs 799 to Kochi: delivery Rs 49 (other city, Rs 499+)."
+  },
+  {
+    "order_id": "SK48213",
+    "customer_id": "C1001",
+    "customer_name": "Rohan Mehta",
+    "city": "Mumbai",
+    "pin_code": "400053",
+    "placed_on": "2026-11-10",
+    "status": "delivered",
+    "promised_by": "2026-11-13",
+    "delivered_on": "2026-11-13",
+    "items": [
+      {
+        "sku": "EL-PFS2",
+        "name": "Pulse Fit S2 Smartwatch",
+        "category": "electronics",
+        "qty": 1,
+        "unit_price_inr": 1299,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 1299,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 1299,
+    "payment_method": "upi",
+    "upi_reference": "223005401501",
+    "emi_months": null,
+    "tracking_number": "SKX126855092",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 1299,
+        "date": "2026-11-10"
+      }
+    ],
+    "return": null,
+    "note": "Customer reports cracked screen on arrival (refund chain / tools labs)."
+  },
+  {
+    "order_id": "SK48214",
+    "customer_id": "C1002",
+    "customer_name": "Priya Sharma",
+    "city": "Delhi",
+    "pin_code": "110017",
+    "placed_on": "2026-11-02",
+    "status": "delivered",
+    "promised_by": "2026-11-05",
+    "delivered_on": "2026-11-06",
+    "items": [
+      {
+        "sku": "CL-KRT12",
+        "name": "Embroidered Silk Kurta",
+        "category": "clothing",
+        "qty": 1,
+        "unit_price_inr": 1899,
+        "sale": true,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 1899,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 1899,
+    "payment_method": "card",
+    "upi_reference": null,
+    "emi_months": null,
+    "tracking_number": "SKX210053353",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 1899,
+        "date": "2026-11-02"
+      }
+    ],
+    "return": null,
+    "note": "Kurta arrived torn (Diwali order)."
+  },
+  {
+    "order_id": "SK48231",
+    "customer_id": "C1009",
+    "customer_name": "Farhan Khan",
+    "city": "Lucknow",
+    "pin_code": "226010",
+    "placed_on": "2026-11-12",
+    "status": "delivered",
+    "promised_by": "2026-11-18",
+    "delivered_on": "2026-11-15",
+    "items": [
+      {
+        "sku": "EL-CH65",
+        "name": "65W GaN Charger",
+        "category": "electronics",
+        "qty": 1,
+        "unit_price_inr": 799,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 799,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 49,
+    "cod_fee_inr": 0,
+    "total_inr": 848,
+    "payment_method": "upi",
+    "upi_reference": "816039851953",
+    "emi_months": null,
+    "tracking_number": "SKX853041955",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 848,
+        "date": "2026-11-12"
+      }
+    ],
+    "return": null,
+    "note": "Rs 799 charger inside the window: auto-refund case."
+  },
+  {
+    "order_id": "SK48305",
+    "customer_id": "C1001",
+    "customer_name": "Rohan Mehta",
+    "city": "Mumbai",
+    "pin_code": "400053",
+    "placed_on": "2026-11-08",
+    "status": "delivered",
+    "promised_by": "2026-11-11",
+    "delivered_on": "2026-11-12",
+    "items": [
+      {
+        "sku": "EL-PM20W",
+        "name": "PowerMax 20W Fast Charger",
+        "category": "electronics",
+        "qty": 1,
+        "unit_price_inr": 999,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 999,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 999,
+    "payment_method": "upi",
+    "upi_reference": "403832645883",
+    "emi_months": null,
+    "tracking_number": "SKX362950628",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 999,
+        "date": "2026-11-08"
+      }
+    ],
+    "return": null,
+    "note": "Charger stopped working (routing lab, Rs 999 damaged item)."
+  },
+  {
+    "order_id": "SK48344",
+    "customer_id": "C1014",
+    "customer_name": "Pooja Patel",
+    "city": "Ahmedabad",
+    "pin_code": "380015",
+    "placed_on": "2026-11-13",
+    "status": "delivered",
+    "promised_by": "2026-11-16",
+    "delivered_on": "2026-11-15",
+    "items": [
+      {
+        "sku": "EL-SBX2",
+        "name": "SonicBuds X2 Wireless Earbuds",
+        "category": "electronics",
+        "qty": 1,
+        "unit_price_inr": 1999,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 1999,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 1999,
+    "payment_method": "upi",
+    "upi_reference": "988022315787",
+    "emi_months": null,
+    "tracking_number": "SKX271432881",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 1999,
+        "date": "2026-11-13"
+      }
+    ],
+    "return": null,
+    "note": "Opened earbuds, one side has no sound (faulty)."
+  },
+  {
+    "order_id": "SK48356",
+    "customer_id": "C1015",
+    "customer_name": "Karan Malhotra",
+    "city": "Chandigarh",
+    "pin_code": "160017",
+    "placed_on": "2026-11-14",
+    "status": "delivered",
+    "promised_by": "2026-11-20",
+    "delivered_on": "2026-11-16",
+    "items": [
+      {
+        "sku": "EL-HPW8",
+        "name": "WaveBass 800 Headphones",
+        "category": "electronics",
+        "qty": 1,
+        "unit_price_inr": 2499,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 2499,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 49,
+    "cod_fee_inr": 0,
+    "total_inr": 2548,
+    "payment_method": "card",
+    "upi_reference": null,
+    "emi_months": null,
+    "tracking_number": "SKX849621470",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 2548,
+        "date": "2026-11-14"
+      }
+    ],
+    "return": null,
+    "note": "Opened, working; customer just doesn't like them."
+  },
+  {
+    "order_id": "SK48377",
+    "customer_id": "C1002",
+    "customer_name": "Priya Sharma",
+    "city": "Delhi",
+    "pin_code": "110017",
+    "placed_on": "2026-11-08",
+    "status": "shipped",
+    "promised_by": "2026-11-12",
+    "delivered_on": null,
+    "items": [
+      {
+        "sku": "CL-ANK07",
+        "name": "Cotton Anarkali Kurta",
+        "category": "clothing",
+        "qty": 1,
+        "unit_price_inr": 1299,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 1299,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 1299,
+    "payment_method": "upi",
+    "upi_reference": "251282538206",
+    "emi_months": null,
+    "tracking_number": "SKX890779946",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 1299,
+        "date": "2026-11-08"
+      },
+      {
+        "type": "charge",
+        "amount_inr": 1299,
+        "date": "2026-11-08",
+        "duplicate": true
+      }
+    ],
+    "return": null,
+    "note": "Shipped 9 days ago, not delivered; customer charged twice."
+  },
+  {
+    "order_id": "SK48401",
+    "customer_id": "C1016",
+    "customer_name": "Lakshmi Krishnan",
+    "city": "Coimbatore",
+    "pin_code": "641018",
+    "placed_on": "2026-11-15",
+    "status": "out_for_delivery",
+    "promised_by": "2026-11-17",
+    "delivered_on": null,
+    "items": [
+      {
+        "sku": "CL-SAR22",
+        "name": "Kanjivaram Silk Saree",
+        "category": "clothing",
+        "qty": 1,
+        "unit_price_inr": 7499,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 7499,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 7499,
+    "payment_method": "card",
+    "upi_reference": null,
+    "emi_months": null,
+    "tracking_number": "SKX553778756",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 7499,
+        "date": "2026-11-15"
+      }
+    ],
+    "return": null,
+    "note": null
+  },
+  {
+    "order_id": "SK48412",
+    "customer_id": "C1011",
+    "customer_name": "Neha Gupta",
+    "city": "Delhi",
+    "pin_code": "110017",
+    "placed_on": "2026-11-05",
+    "status": "delivered",
+    "promised_by": "2026-11-08",
+    "delivered_on": "2026-11-09",
+    "items": [
+      {
+        "sku": "HM-BTL2",
+        "name": "Insulated Steel Bottle (Pack of 2)",
+        "category": "home_kitchen",
+        "qty": 1,
+        "unit_price_inr": 1299,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 1299,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 1299,
+    "payment_method": "upi",
+    "upi_reference": "342319992484",
+    "emi_months": null,
+    "tracking_number": "SKX582334538",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 1299,
+        "date": "2026-11-05"
+      },
+      {
+        "type": "charge",
+        "amount_inr": 1299,
+        "date": "2026-11-05",
+        "duplicate": true
+      }
+    ],
+    "return": null,
+    "note": "Delivered to an OLD saved address; customer also charged twice.",
+    "delivered_to": "Old address: Flat 12, Lajpat Nagar II, Delhi 110024"
+  },
+  {
+    "order_id": "SK48415",
+    "customer_id": "C1017",
+    "customer_name": "Imran Sheikh",
+    "city": "Bhopal",
+    "pin_code": "462016",
+    "placed_on": "2026-11-14",
+    "status": "shipped",
+    "promised_by": "2026-11-20",
+    "delivered_on": null,
+    "items": [
+      {
+        "sku": "HM-PRS5",
+        "name": "Pressure Cooker 5L",
+        "category": "home_kitchen",
+        "qty": 1,
+        "unit_price_inr": 2199,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 2199,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 49,
+    "cod_fee_inr": 30,
+    "total_inr": 2278,
+    "payment_method": "cod",
+    "upi_reference": null,
+    "emi_months": null,
+    "tracking_number": "SKX465341213",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 0,
+        "date": "2026-11-14"
+      }
+    ],
+    "return": null,
+    "note": null
+  },
+  {
+    "order_id": "SK48420",
+    "customer_id": "C1018",
+    "customer_name": "Divya Joshi",
+    "city": "Nagpur",
+    "pin_code": "440010",
+    "placed_on": "2026-11-16",
+    "status": "placed",
+    "promised_by": "2026-11-22",
+    "delivered_on": null,
+    "items": [
+      {
+        "sku": "BT-SNS1",
+        "name": "Sunscreen SPF 50 (Pack of 2)",
+        "category": "beauty",
+        "qty": 1,
+        "unit_price_inr": 449,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 449,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 79,
+    "cod_fee_inr": 0,
+    "total_inr": 528,
+    "payment_method": "upi",
+    "upi_reference": "268697172873",
+    "emi_months": null,
+    "tracking_number": null,
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 528,
+        "date": "2026-11-16"
+      }
+    ],
+    "return": null,
+    "note": null
+  },
+  {
+    "order_id": "SK48433",
+    "customer_id": "C1019",
+    "customer_name": "Siddharth Das",
+    "city": "Guwahati",
+    "pin_code": "781005",
+    "placed_on": "2026-11-04",
+    "status": "shipped",
+    "promised_by": "2026-11-14",
+    "delivered_on": null,
+    "items": [
+      {
+        "sku": "EL-PB10",
+        "name": "PowerMax 10000 mAh Power Bank",
+        "category": "electronics",
+        "qty": 1,
+        "unit_price_inr": 1199,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 1199,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 49,
+    "cod_fee_inr": 0,
+    "total_inr": 1248,
+    "payment_method": "upi",
+    "upi_reference": "472646369774",
+    "emi_months": null,
+    "tracking_number": "SKX209747451",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 1248,
+        "date": "2026-11-04"
+      }
+    ],
+    "return": null,
+    "note": "North-East delivery, can take up to 10 working days."
+  },
+  {
+    "order_id": "SK48441",
+    "customer_id": "C1020",
+    "customer_name": "Fatima Siddiqui",
+    "city": "Patna",
+    "pin_code": "800001",
+    "placed_on": "2026-11-09",
+    "status": "rto",
+    "promised_by": "2026-11-15",
+    "delivered_on": null,
+    "items": [
+      {
+        "sku": "CL-JKT3",
+        "name": "Puffer Jacket",
+        "category": "clothing",
+        "qty": 1,
+        "unit_price_inr": 2599,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 2599,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 49,
+    "cod_fee_inr": 30,
+    "total_inr": 2678,
+    "payment_method": "cod",
+    "upi_reference": null,
+    "emi_months": null,
+    "tracking_number": "SKX199585092",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 0,
+        "date": "2026-11-09"
+      }
+    ],
+    "return": null,
+    "note": "Three failed delivery attempts; returned to warehouse."
+  },
+  {
+    "order_id": "SK48450",
+    "customer_id": "C1007",
+    "customer_name": "Arjun Reddy",
+    "city": "Hyderabad",
+    "pin_code": "500081",
+    "placed_on": "2026-11-01",
+    "status": "returned",
+    "promised_by": "2026-11-04",
+    "delivered_on": "2026-11-04",
+    "items": [
+      {
+        "sku": "EL-NV5G",
+        "name": "Nova 5G Phone (8 GB, 128 GB)",
+        "category": "electronics",
+        "qty": 1,
+        "unit_price_inr": 18999,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 18999,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 18999,
+    "payment_method": "card",
+    "upi_reference": null,
+    "emi_months": null,
+    "tracking_number": "SKX702632297",
+    "refunds": [
+      {
+        "amount_inr": 18999,
+        "status": "completed",
+        "date": "2026-11-10",
+        "reference": "ARN73991204417",
+        "reason": "damaged"
+      }
+    ],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 18999,
+        "date": "2026-11-01"
+      }
+    ],
+    "return": null,
+    "note": "Already refunded in full last week: a second refund must be blocked."
+  },
+  {
+    "order_id": "SK48455",
+    "customer_id": "C1021",
+    "customer_name": "Harpreet Kaur",
+    "city": "Gurugram",
+    "pin_code": "122002",
+    "placed_on": "2026-11-13",
+    "status": "delivered",
+    "promised_by": "2026-11-16",
+    "delivered_on": "2026-11-15",
+    "items": [
+      {
+        "sku": "FW-SNK9",
+        "name": "Canvas Sneakers",
+        "category": "footwear",
+        "qty": 1,
+        "unit_price_inr": 1499,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 1499,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 1499,
+    "payment_method": "upi",
+    "upi_reference": "204710990461",
+    "emi_months": null,
+    "tracking_number": "SKX485451171",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 1499,
+        "date": "2026-11-13"
+      }
+    ],
+    "return": null,
+    "note": "Wrong size; wants a size exchange."
+  },
+  {
+    "order_id": "SK48460",
+    "customer_id": "C1022",
+    "customer_name": "Manish Tiwari",
+    "city": "Noida",
+    "pin_code": "201301",
+    "placed_on": "2026-11-12",
+    "status": "delivered",
+    "promised_by": "2026-11-15",
+    "delivered_on": "2026-11-14",
+    "items": [
+      {
+        "sku": "EL-RF260",
+        "name": "Frostline 260L Refrigerator",
+        "category": "large_appliances",
+        "qty": 1,
+        "unit_price_inr": 26990,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 26990,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 26990,
+    "payment_method": "emi",
+    "upi_reference": null,
+    "emi_months": 9,
+    "tracking_number": "SKX469319644",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 26990,
+        "date": "2026-11-12"
+      }
+    ],
+    "return": null,
+    "note": null
+  },
+  {
+    "order_id": "SK48466",
+    "customer_id": "C1023",
+    "customer_name": "Deepa Hegde",
+    "city": "Mysuru",
+    "pin_code": "570017",
+    "placed_on": "2026-11-15",
+    "status": "delivered",
+    "promised_by": "2026-11-21",
+    "delivered_on": "2026-11-16",
+    "items": [
+      {
+        "sku": "GR-DRY1",
+        "name": "Premium Dry Fruits Box 1 kg",
+        "category": "grocery",
+        "qty": 1,
+        "unit_price_inr": 1299,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 1299,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 49,
+    "cod_fee_inr": 0,
+    "total_inr": 1348,
+    "payment_method": "upi",
+    "upi_reference": "390355792387",
+    "emi_months": null,
+    "tracking_number": "SKX966647391",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 1348,
+        "date": "2026-11-15"
+      }
+    ],
+    "return": null,
+    "note": "Box arrived crushed (grocery: report within 48 hours)."
+  },
+  {
+    "order_id": "SK48471",
+    "customer_id": "C1024",
+    "customer_name": "Nikhil Shah",
+    "city": "Surat",
+    "pin_code": "395007",
+    "placed_on": "2026-11-16",
+    "status": "placed",
+    "promised_by": "2026-11-22",
+    "delivered_on": null,
+    "items": [
+      {
+        "sku": "GC-E5000",
+        "name": "ShopKart E-Gift Card Rs 5,000",
+        "category": "gift_card",
+        "qty": 1,
+        "unit_price_inr": 5000,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 5000,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 5000,
+    "payment_method": "upi",
+    "upi_reference": "899050535267",
+    "emi_months": null,
+    "tracking_number": null,
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 5000,
+        "date": "2026-11-16"
+      }
+    ],
+    "return": null,
+    "note": null
+  },
+  {
+    "order_id": "SK48477",
+    "customer_id": "C1013",
+    "customer_name": "Aditya Banerjee",
+    "city": "Kolkata",
+    "pin_code": "700091",
+    "placed_on": "2026-11-12",
+    "status": "delivered",
+    "promised_by": "2026-11-15",
+    "delivered_on": "2026-11-14",
+    "items": [
+      {
+        "sku": "BK-PSY2",
+        "name": "The Psychology of Money",
+        "category": "books",
+        "qty": 1,
+        "unit_price_inr": 349,
+        "sale": false,
+        "clearance": false
+      },
+      {
+        "sku": "BK-ZTO1",
+        "name": "Zero to One",
+        "category": "books",
+        "qty": 1,
+        "unit_price_inr": 399,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 748,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 748,
+    "payment_method": "gift_card",
+    "upi_reference": null,
+    "emi_months": null,
+    "tracking_number": "SKX593303705",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 748,
+        "date": "2026-11-12"
+      }
+    ],
+    "return": null,
+    "note": null
+  },
+  {
+    "order_id": "SK48480",
+    "customer_id": "C1006",
+    "customer_name": "Vikram Singh",
+    "city": "Bengaluru",
+    "pin_code": "560034",
+    "placed_on": "2026-11-15",
+    "status": "shipped",
+    "promised_by": "2026-11-17",
+    "delivered_on": null,
+    "items": [
+      {
+        "sku": "EL-PH14",
+        "name": "Orion 14 Pro Phone (256 GB)",
+        "category": "electronics",
+        "qty": 1,
+        "unit_price_inr": 64999,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 64999,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 64999,
+    "payment_method": "card",
+    "upi_reference": null,
+    "emi_months": null,
+    "tracking_number": "SKX675770529",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 64999,
+        "date": "2026-11-15"
+      }
+    ],
+    "return": null,
+    "note": null
+  },
+  {
+    "order_id": "SK48483",
+    "customer_id": "C1003",
+    "customer_name": "Sneha Kulkarni",
+    "city": "Pune",
+    "pin_code": "411038",
+    "placed_on": "2026-11-14",
+    "status": "delivered",
+    "promised_by": "2026-11-17",
+    "delivered_on": "2026-11-16",
+    "items": [
+      {
+        "sku": "HM-BED2",
+        "name": "Cotton Bedsheet Set (Double)",
+        "category": "home_kitchen",
+        "qty": 1,
+        "unit_price_inr": 1099,
+        "sale": false,
+        "clearance": false
+      },
+      {
+        "sku": "HM-PIL2",
+        "name": "Pillow Covers (Set of 4)",
+        "category": "home_kitchen",
+        "qty": 1,
+        "unit_price_inr": 399,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 1498,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 1498,
+    "payment_method": "upi",
+    "upi_reference": "516278088865",
+    "emi_months": null,
+    "tracking_number": "SKX184611066",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 1498,
+        "date": "2026-11-14"
+      }
+    ],
+    "return": null,
+    "note": null
+  },
+  {
+    "order_id": "SK48486",
+    "customer_id": "C1009",
+    "customer_name": "Farhan Khan",
+    "city": "Lucknow",
+    "pin_code": "226010",
+    "placed_on": "2026-11-16",
+    "status": "placed",
+    "promised_by": "2026-11-22",
+    "delivered_on": null,
+    "items": [
+      {
+        "sku": "CL-TSH3",
+        "name": "Cotton T-Shirt (Pack of 3)",
+        "category": "clothing",
+        "qty": 1,
+        "unit_price_inr": 899,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 899,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 49,
+    "cod_fee_inr": 30,
+    "total_inr": 978,
+    "payment_method": "cod",
+    "upi_reference": null,
+    "emi_months": null,
+    "tracking_number": null,
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 0,
+        "date": "2026-11-16"
+      }
+    ],
+    "return": null,
+    "note": null
+  },
+  {
+    "order_id": "SK48488",
+    "customer_id": "C1008",
+    "customer_name": "Kavya Rao",
+    "city": "Chennai",
+    "pin_code": "600041",
+    "placed_on": "2026-11-11",
+    "status": "delivered",
+    "promised_by": "2026-11-14",
+    "delivered_on": "2026-11-14",
+    "items": [
+      {
+        "sku": "EL-NT10",
+        "name": "Nimbus Tab 10 Tablet",
+        "category": "electronics",
+        "qty": 1,
+        "unit_price_inr": 9499,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 9499,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 9499,
+    "payment_method": "card",
+    "upi_reference": null,
+    "emi_months": null,
+    "tracking_number": "SKX313500298",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 9499,
+        "date": "2026-11-11"
+      }
+    ],
+    "return": null,
+    "note": "Damaged; Rs 9,499 refund needs human approval (> Rs 5,000)."
+  },
+  {
+    "order_id": "SK48490",
+    "customer_id": "C1014",
+    "customer_name": "Pooja Patel",
+    "city": "Ahmedabad",
+    "pin_code": "380015",
+    "placed_on": "2026-11-10",
+    "status": "delivered",
+    "promised_by": "2026-11-13",
+    "delivered_on": "2026-11-13",
+    "items": [
+      {
+        "sku": "EL-LT15",
+        "name": "AeroBook 15 Laptop",
+        "category": "electronics",
+        "qty": 1,
+        "unit_price_inr": 62490,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 62490,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 62490,
+    "payment_method": "emi",
+    "upi_reference": null,
+    "emi_months": 6,
+    "tracking_number": "SKX692749116",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 62490,
+        "date": "2026-11-10"
+      }
+    ],
+    "return": null,
+    "note": "Laptop, open-box delivery."
+  },
+  {
+    "order_id": "SK48493",
+    "customer_id": "C1016",
+    "customer_name": "Lakshmi Krishnan",
+    "city": "Coimbatore",
+    "pin_code": "641018",
+    "placed_on": "2026-11-03",
+    "status": "delivered",
+    "promised_by": "2026-11-09",
+    "delivered_on": "2026-11-08",
+    "items": [
+      {
+        "sku": "FW-FRM2",
+        "name": "Leather Formal Shoes",
+        "category": "footwear",
+        "qty": 1,
+        "unit_price_inr": 3299,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 3299,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 3299,
+    "payment_method": "card",
+    "upi_reference": null,
+    "emi_months": null,
+    "tracking_number": "SKX414797776",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 3299,
+        "date": "2026-11-03"
+      }
+    ],
+    "return": null,
+    "note": "Delivered 9 days ago: still inside the 10-day footwear window."
+  },
+  {
+    "order_id": "SK48495",
+    "customer_id": "C1020",
+    "customer_name": "Fatima Siddiqui",
+    "city": "Patna",
+    "pin_code": "800001",
+    "placed_on": "2026-11-15",
+    "status": "delivered",
+    "promised_by": "2026-11-21",
+    "delivered_on": "2026-11-16",
+    "items": [
+      {
+        "sku": "EL-SW3",
+        "name": "Pulse Fit S3 Smartwatch",
+        "category": "electronics",
+        "qty": 1,
+        "unit_price_inr": 4999,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 4999,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 4999,
+    "payment_method": "upi",
+    "upi_reference": "790757033266",
+    "emi_months": null,
+    "tracking_number": "SKX764130526",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 4999,
+        "date": "2026-11-15"
+      }
+    ],
+    "return": null,
+    "note": "Exactly Rs 4,999: just under the Rs 5,000 human-approval limit."
+  },
+  {
+    "order_id": "SK48497",
+    "customer_id": "C1021",
+    "customer_name": "Harpreet Kaur",
+    "city": "Gurugram",
+    "pin_code": "122002",
+    "placed_on": "2026-11-11",
+    "status": "delivered",
+    "promised_by": "2026-11-14",
+    "delivered_on": "2026-11-14",
+    "items": [
+      {
+        "sku": "EL-CAM1",
+        "name": "ClearView Action Camera",
+        "category": "electronics",
+        "qty": 1,
+        "unit_price_inr": 5499,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 5499,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 5499,
+    "payment_method": "upi",
+    "upi_reference": "732913403120",
+    "emi_months": null,
+    "tracking_number": "SKX306468299",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 5499,
+        "date": "2026-11-11"
+      }
+    ],
+    "return": null,
+    "note": "Rs 5,499: just above the Rs 5,000 limit."
+  },
+  {
+    "order_id": "SK48499",
+    "customer_id": "C1024",
+    "customer_name": "Nikhil Shah",
+    "city": "Surat",
+    "pin_code": "395007",
+    "placed_on": "2026-11-14",
+    "status": "delivered",
+    "promised_by": "2026-11-20",
+    "delivered_on": "2026-11-16",
+    "items": [
+      {
+        "sku": "CL-LHG1",
+        "name": "Bridal Lehenga",
+        "category": "clothing",
+        "qty": 1,
+        "unit_price_inr": 14999,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 14999,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 0,
+    "cod_fee_inr": 0,
+    "total_inr": 14999,
+    "payment_method": "card",
+    "upi_reference": null,
+    "emi_months": null,
+    "tracking_number": "SKX856528252",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 14999,
+        "date": "2026-11-14"
+      }
+    ],
+    "return": null,
+    "note": "Marked delivered but customer says not received."
+  },
+  {
+    "order_id": "SK48502",
+    "customer_id": "C1018",
+    "customer_name": "Divya Joshi",
+    "city": "Nagpur",
+    "pin_code": "440010",
+    "placed_on": "2026-11-12",
+    "status": "delivered",
+    "promised_by": "2026-11-18",
+    "delivered_on": "2026-11-15",
+    "items": [
+      {
+        "sku": "EL-SB1",
+        "name": "BoomBox Mini Speaker",
+        "category": "electronics",
+        "qty": 1,
+        "unit_price_inr": 1799,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 1799,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 49,
+    "cod_fee_inr": 30,
+    "total_inr": 1878,
+    "payment_method": "cod",
+    "upi_reference": null,
+    "emi_months": null,
+    "tracking_number": "SKX174684276",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 0,
+        "date": "2026-11-12"
+      }
+    ],
+    "return": null,
+    "note": null
+  },
+  {
+    "order_id": "SK48506",
+    "customer_id": "C1012",
+    "customer_name": "Rahul Verma",
+    "city": "Indore",
+    "pin_code": "452010",
+    "placed_on": "2026-11-16",
+    "status": "placed",
+    "promised_by": "2026-11-22",
+    "delivered_on": null,
+    "items": [
+      {
+        "sku": "HM-LMP1",
+        "name": "LED Desk Lamp",
+        "category": "home_kitchen",
+        "qty": 1,
+        "unit_price_inr": 649,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 649,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 49,
+    "cod_fee_inr": 0,
+    "total_inr": 698,
+    "payment_method": "upi",
+    "upi_reference": "826046287257",
+    "emi_months": null,
+    "tracking_number": null,
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 698,
+        "date": "2026-11-16"
+      }
+    ],
+    "return": null,
+    "note": null
+  },
+  {
+    "order_id": "SK48508",
+    "customer_id": "C1023",
+    "customer_name": "Deepa Hegde",
+    "city": "Mysuru",
+    "pin_code": "570017",
+    "placed_on": "2026-11-09",
+    "status": "delivered",
+    "promised_by": "2026-11-15",
+    "delivered_on": "2026-11-12",
+    "items": [
+      {
+        "sku": "CL-KRT20",
+        "name": "Linen Kurta Set",
+        "category": "clothing",
+        "qty": 1,
+        "unit_price_inr": 2199,
+        "sale": false,
+        "clearance": false
+      }
+    ],
+    "subtotal_inr": 2199,
+    "discount_inr": 0,
+    "coupon": null,
+    "delivery_fee_inr": 49,
+    "cod_fee_inr": 0,
+    "total_inr": 2248,
+    "payment_method": "upi",
+    "upi_reference": "947087372942",
+    "emi_months": null,
+    "tracking_number": "SKX410727955",
+    "refunds": [],
+    "payment_events": [
+      {
+        "type": "charge",
+        "amount_inr": 2248,
+        "date": "2026-11-09"
+      }
+    ],
+    "return": null,
+    "note": "Wants to return: changed mind, tags attached."
+  }
+]

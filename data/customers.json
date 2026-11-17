@@ -1,0 +1,378 @@
+[
+  {
+    "customer_id": "C1001",
+    "name": "Rohan Mehta",
+    "email": "rohan.mehta@example.in",
+    "phone": "+91 9820709497",
+    "city": "Mumbai",
+    "pin_code": "400053",
+    "plus_member": true,
+    "joined_on": "2023-04-22",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK48213",
+      "SK48305"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1002",
+    "name": "Priya Sharma",
+    "email": "priya.sharma@example.in",
+    "phone": "+91 9823556182",
+    "city": "Delhi",
+    "pin_code": "110017",
+    "plus_member": false,
+    "joined_on": "2024-02-18",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK48214",
+      "SK48377"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1003",
+    "name": "Sneha Kulkarni",
+    "email": "sneha.kulkarni@example.in",
+    "phone": "+91 9847308985",
+    "city": "Pune",
+    "pin_code": "411038",
+    "plus_member": false,
+    "joined_on": "2024-07-17",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK47731",
+      "SK48483"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1005",
+    "name": "Anjali Menon",
+    "email": "anjali.menon@example.in",
+    "phone": "+91 9895320121",
+    "city": "Kochi",
+    "pin_code": "682020",
+    "plus_member": false,
+    "joined_on": "2024-01-18",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK48190"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1006",
+    "name": "Vikram Singh",
+    "email": "vikram.singh@example.in",
+    "phone": "+91 9831831063",
+    "city": "Bengaluru",
+    "pin_code": "560034",
+    "plus_member": true,
+    "joined_on": "2024-01-29",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK46655",
+      "SK48480"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1007",
+    "name": "Arjun Reddy",
+    "email": "arjun.reddy@example.in",
+    "phone": "+91 9857683626",
+    "city": "Hyderabad",
+    "pin_code": "500081",
+    "plus_member": false,
+    "joined_on": "2023-03-06",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK48450"
+    ],
+    "refunds_last_30_days": 1
+  },
+  {
+    "customer_id": "C1008",
+    "name": "Kavya Rao",
+    "email": "kavya.rao@example.in",
+    "phone": "+91 9899949389",
+    "city": "Chennai",
+    "pin_code": "600041",
+    "plus_member": false,
+    "joined_on": "2023-07-01",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK48488"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1009",
+    "name": "Farhan Khan",
+    "email": "farhan.khan@example.in",
+    "phone": "+91 9896977837",
+    "city": "Lucknow",
+    "pin_code": "226010",
+    "plus_member": false,
+    "joined_on": "2022-05-27",
+    "preferred_language": "hinglish",
+    "order_ids": [
+      "SK48231",
+      "SK48486"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1010",
+    "name": "Sunita Devi",
+    "email": "sunita.devi@example.in",
+    "phone": "+91 9891756179",
+    "city": "Jaipur",
+    "pin_code": "302017",
+    "plus_member": false,
+    "joined_on": "2025-07-24",
+    "preferred_language": "hi",
+    "order_ids": [
+      "SK48120"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1011",
+    "name": "Neha Gupta",
+    "email": "neha.gupta@example.in",
+    "phone": "+91 9832969840",
+    "city": "Delhi",
+    "pin_code": "110017",
+    "plus_member": false,
+    "joined_on": "2024-12-29",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK48140",
+      "SK48412"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1012",
+    "name": "Rahul Verma",
+    "email": "rahul.verma@example.in",
+    "phone": "+91 9842857966",
+    "city": "Indore",
+    "pin_code": "452010",
+    "plus_member": false,
+    "joined_on": "2022-12-01",
+    "preferred_language": "hinglish",
+    "order_ids": [
+      "SK47990",
+      "SK48506"
+    ],
+    "refunds_last_30_days": 1
+  },
+  {
+    "customer_id": "C1013",
+    "name": "Aditya Banerjee",
+    "email": "aditya.banerjee@example.in",
+    "phone": "+91 9872043515",
+    "city": "Kolkata",
+    "pin_code": "700091",
+    "plus_member": true,
+    "joined_on": "2024-02-17",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK04512",
+      "SK48477"
+    ],
+    "refunds_last_30_days": 1
+  },
+  {
+    "customer_id": "C1014",
+    "name": "Pooja Patel",
+    "email": "pooja.patel@example.in",
+    "phone": "+91 9846231783",
+    "city": "Ahmedabad",
+    "pin_code": "380015",
+    "plus_member": false,
+    "joined_on": "2025-08-03",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK48344",
+      "SK48490"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1015",
+    "name": "Karan Malhotra",
+    "email": "karan.malhotra@example.in",
+    "phone": "+91 9884752529",
+    "city": "Chandigarh",
+    "pin_code": "160017",
+    "plus_member": false,
+    "joined_on": "2023-03-26",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK48356"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1016",
+    "name": "Lakshmi Krishnan",
+    "email": "lakshmi.krishnan@example.in",
+    "phone": "+91 9853524491",
+    "city": "Coimbatore",
+    "pin_code": "641018",
+    "plus_member": false,
+    "joined_on": "2022-04-25",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK48401",
+      "SK48493"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1017",
+    "name": "Imran Sheikh",
+    "email": "imran.sheikh@example.in",
+    "phone": "+91 9840742311",
+    "city": "Bhopal",
+    "pin_code": "462016",
+    "plus_member": false,
+    "joined_on": "2022-03-07",
+    "preferred_language": "hinglish",
+    "order_ids": [
+      "SK48415"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1018",
+    "name": "Divya Joshi",
+    "email": "divya.joshi@example.in",
+    "phone": "+91 9852339391",
+    "city": "Nagpur",
+    "pin_code": "440010",
+    "plus_member": false,
+    "joined_on": "2024-04-01",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK48420",
+      "SK48502"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1019",
+    "name": "Siddharth Das",
+    "email": "siddharth.das@example.in",
+    "phone": "+91 9845935572",
+    "city": "Guwahati",
+    "pin_code": "781005",
+    "plus_member": false,
+    "joined_on": "2022-05-16",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK48433"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1020",
+    "name": "Fatima Siddiqui",
+    "email": "fatima.siddiqui@example.in",
+    "phone": "+91 9838317637",
+    "city": "Patna",
+    "pin_code": "800001",
+    "plus_member": false,
+    "joined_on": "2025-03-07",
+    "preferred_language": "hi",
+    "order_ids": [
+      "SK48441",
+      "SK48495"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1021",
+    "name": "Harpreet Kaur",
+    "email": "harpreet.kaur@example.in",
+    "phone": "+91 9852235350",
+    "city": "Gurugram",
+    "pin_code": "122002",
+    "plus_member": false,
+    "joined_on": "2023-03-12",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK48455",
+      "SK48497"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1022",
+    "name": "Manish Tiwari",
+    "email": "manish.tiwari@example.in",
+    "phone": "+91 9897971488",
+    "city": "Noida",
+    "pin_code": "201301",
+    "plus_member": false,
+    "joined_on": "2024-10-19",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK48460"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1023",
+    "name": "Deepa Hegde",
+    "email": "deepa.hegde@example.in",
+    "phone": "+91 9863100814",
+    "city": "Mysuru",
+    "pin_code": "570017",
+    "plus_member": false,
+    "joined_on": "2025-08-09",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK48466",
+      "SK48508"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1024",
+    "name": "Nikhil Shah",
+    "email": "nikhil.shah@example.in",
+    "phone": "+91 9871586053",
+    "city": "Surat",
+    "pin_code": "395007",
+    "plus_member": false,
+    "joined_on": "2022-10-20",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK48471",
+      "SK48499"
+    ],
+    "refunds_last_30_days": 0
+  },
+  {
+    "customer_id": "C1042",
+    "name": "Meera Nair",
+    "email": "meera.nair@example.in",
+    "phone": "+91 9845551614",
+    "city": "Kochi",
+    "pin_code": "682020",
+    "plus_member": false,
+    "joined_on": "2022-10-13",
+    "preferred_language": "en",
+    "order_ids": [
+      "SK47215",
+      "SK48102"
+    ],
+    "refunds_last_30_days": 0
+  }
+]
