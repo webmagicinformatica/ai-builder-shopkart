@@ -83,7 +83,7 @@ claude mcp list
 
 - `/mcp` shows the server, its 4 tools and its prompt.
 - Ask: *"Which open tickets mention a cracked screen? Escalate the one above ₹5,000."* Claude asks before it runs `add_note` or `set_status`.
-- The prompt is a slash command: `/shopkart-tickets:summarise_ticket TCK-20123` (also `/mcp__shopkart-tickets__summarise_ticket`).
+- The prompt is a slash command: `/mcp__shopkart-tickets__summarise_ticket TCK-20123` (also `/mcp__shopkart-tickets__summarise_ticket`).
 - A resource is an @-mention: `@shopkart-tickets:shopkart://tickets/TCK-20101`.
 
 ## 5. Checkpoint

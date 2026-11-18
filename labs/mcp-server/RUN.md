@@ -219,7 +219,7 @@ claude mcp list                          # shopkart-tickets ... ⏸ Pending appr
 claude
 > /mcp
 > Which open tickets mention a cracked screen? Escalate the one above ₹5,000.
-> /shopkart-tickets:summarise_ticket TCK-20123
+> /mcp__shopkart-tickets__summarise_ticket TCK-20123
 > Summarise @shopkart-tickets:shopkart://tickets/TCK-20101 in one line.
 ```
 
