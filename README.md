@@ -97,7 +97,7 @@ Why the extra flags? "Use this template" gives your repo a fresh history, so Git
 **Every time after that:**
 
 ```bash
-git pull upstream main
+git pull upstream main --no-edit
 uv sync
 ```
 

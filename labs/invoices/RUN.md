@@ -289,7 +289,7 @@ Flags as expected: 1 of 1
 Wrong values that slipped past every check: 0
 ```
 
-The difference worth showing: `gpt-6-luna` read the blurred invoice number `NDP/26/11/0091` as `NDP/26/1/0091`. No arithmetic or GSTIN rule could see that, but the sharpness check on the image had already sent the photo to a person, so it slipped past nothing. (`review.py show 1 --db .shopkart/invoices-openai.db` shows the reading.)
+The difference worth showing: `gpt-6-luna` read the blurred invoice number `NDP/26/11/0091` as `NDP/26/1/0091`. No arithmetic or GSTIN rule could see that, but the sharpness check on the image had already sent the photo to a person, so it slipped past nothing. (`review.py --db .shopkart/invoices-openai.db show 1` shows the reading.)
 Also: OpenAI billed 1,701 input tokens for the same page Claude billed 3,107 for, and the estimate (Claude's patch maths) doesn't know that. This run printed "1 invoices"; the wording has since been fixed to "1 invoice".
 
 ## Spend
