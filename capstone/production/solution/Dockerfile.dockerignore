@@ -1,0 +1,9 @@
+# What `docker build` must never see.
+.env
+.env.*
+.venv
+.git
+.shopkart
+**/__pycache__
+.pytest_cache
+data/invoices

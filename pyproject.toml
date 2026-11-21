@@ -56,5 +56,5 @@ mcp-serve = [
 package = false
 
 [tool.pytest.ini_options]
-testpaths = ["tests", "labs"]
+testpaths = ["tests", "labs", "capstone"]
 pythonpath = ["."]
