@@ -1,0 +1,10 @@
+# What `docker build` must never see. (A Dockerfile.dockerignore next to the Dockerfile
+# works like a .dockerignore at the root, for this Dockerfile only.)
+# TODO 6: the most important line is missing. Secrets never go in the image.
+.venv
+.git
+.shopkart
+**/__pycache__
+.pytest_cache
+data/invoices
+data/policies/pdf

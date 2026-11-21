@@ -1,0 +1,157 @@
+{
+ "widgets": [
+  {
+   "type": "metric",
+   "x": 0,
+   "y": 0,
+   "width": 12,
+   "height": 6,
+   "properties": {
+    "title": "Latency P95: full answer and time to first token (ms)",
+    "region": "ap-southeast-2",
+    "view": "timeSeries",
+    "stacked": false,
+    "metrics": [
+     [
+      {
+       "expression": "SEARCH('{ShopKart/Copilot,Service,Model} MetricName=\"LatencyMs\"', 'p95', 60)",
+       "label": "answer p95",
+       "id": "latencymspn5"
+      }
+     ],
+     [
+      {
+       "expression": "SEARCH('{ShopKart/Copilot,Service,Model} MetricName=\"TTFTMs\"', 'p95', 60)",
+       "label": "first token p95",
+       "id": "ttftmspn5"
+      }
+     ]
+    ],
+    "period": 60,
+    "yAxis": {
+     "left": {
+      "label": "ms",
+      "showUnits": false,
+      "min": 0
+     }
+    }
+   }
+  },
+  {
+   "type": "metric",
+   "x": 12,
+   "y": 0,
+   "width": 12,
+   "height": 6,
+   "properties": {
+    "title": "Requests and errors (per minute)",
+    "region": "ap-southeast-2",
+    "view": "timeSeries",
+    "stacked": false,
+    "metrics": [
+     [
+      {
+       "expression": "SEARCH('{ShopKart/Copilot,Service,Model} MetricName=\"Requests\"', 'Sum', 60)",
+       "label": "requests",
+       "id": "requestsSum"
+      }
+     ],
+     [
+      {
+       "expression": "SEARCH('{ShopKart/Copilot,Service,Model} MetricName=\"Errors\"', 'Sum', 60)",
+       "label": "errors",
+       "id": "errorsSum"
+      }
+     ]
+    ],
+    "period": 60
+   }
+  },
+  {
+   "type": "metric",
+   "x": 0,
+   "y": 6,
+   "width": 12,
+   "height": 6,
+   "properties": {
+    "title": "Cost (USD per minute)",
+    "region": "ap-southeast-2",
+    "view": "timeSeries",
+    "stacked": false,
+    "metrics": [
+     [
+      {
+       "expression": "SEARCH('{ShopKart/Copilot,Service,Model} MetricName=\"CostUSD\"', 'Sum', 60)",
+       "label": "cost $",
+       "id": "costusdSum"
+      }
+     ]
+    ],
+    "period": 60,
+    "yAxis": {
+     "left": {
+      "label": "USD",
+      "showUnits": false,
+      "min": 0
+     }
+    }
+   }
+  },
+  {
+   "type": "metric",
+   "x": 12,
+   "y": 6,
+   "width": 12,
+   "height": 6,
+   "properties": {
+    "title": "Tokens (per minute)",
+    "region": "ap-southeast-2",
+    "view": "timeSeries",
+    "stacked": false,
+    "metrics": [
+     [
+      {
+       "expression": "SEARCH('{ShopKart/Copilot,Service,Model} MetricName=\"InputTokens\"', 'Sum', 60)",
+       "label": "tokens in",
+       "id": "inputtokensSum"
+      }
+     ],
+     [
+      {
+       "expression": "SEARCH('{ShopKart/Copilot,Service,Model} MetricName=\"OutputTokens\"', 'Sum', 60)",
+       "label": "tokens out",
+       "id": "outputtokensSum"
+      }
+     ]
+    ],
+    "period": 60
+   }
+  },
+  {
+   "type": "log",
+   "x": 0,
+   "y": 12,
+   "width": 24,
+   "height": 6,
+   "properties": {
+    "title": "Slowest requests: open the trace by its ID",
+    "region": "ap-southeast-2",
+    "view": "table",
+    "query": "SOURCE 'LOG_GROUP' | filter event = \"chat\" | fields @timestamp, request_id, trace_id, Model, prompt_version, LatencyMs, TTFTMs, CostUSD, error | sort LatencyMs desc | limit 10"
+   }
+  },
+  {
+   "type": "log",
+   "x": 0,
+   "y": 18,
+   "width": 24,
+   "height": 4,
+   "properties": {
+    "title": "Cost by prompt version and model",
+    "region": "ap-southeast-2",
+    "view": "table",
+    "query": "SOURCE 'LOG_GROUP' | filter event = \"chat\" | stats count(*) as requests, sum(CostUSD) as cost_usd, avg(InputTokens) as avg_tokens_in, pct(LatencyMs, 95) as p95_ms by prompt_version, Model"
+   }
+  }
+ ]
+}

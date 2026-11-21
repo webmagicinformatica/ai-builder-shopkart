@@ -1,0 +1,11 @@
+# What `docker build` must never see. (A Dockerfile.dockerignore next to the Dockerfile
+# works like a .dockerignore at the root, for this Dockerfile only.)
+.env
+.env.*
+.venv
+.git
+.shopkart
+**/__pycache__
+.pytest_cache
+data/invoices
+data/policies/pdf
